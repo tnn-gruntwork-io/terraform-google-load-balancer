@@ -47,7 +47,7 @@ provider "google-beta" {
 module "lb" {
   # When using these modules in your own templates, you will need to use a Git URL with a ref attribute that pins you
   # to a specific version of the modules, such as the following example:
-  # source = "github.com/gruntwork-io/terraform-google-load-balancer.git//modules/internal-load-balancer?ref=v0.2.0"
+  # source = "github.com/tnn-gruntwork-io/terraform-google-load-balancer.git//modules/internal-load-balancer?ref=v0.2.0"
   source = "../../modules/internal-load-balancer"
 
   name    = var.name
@@ -81,7 +81,7 @@ module "lb" {
 # ---------------------------------------------------------------------------------------------------------------------
 
 module "vpc_network" {
-  source = "github.com/gruntwork-io/terraform-google-network.git//modules/vpc-network?ref=v0.8.2"
+  source = "github.com/tnn-gruntwork-io/terraform-google-network.git//modules/vpc-network?ref=v0.8.2"
 
   name_prefix = var.name
   project     = var.project
@@ -128,7 +128,7 @@ resource "google_compute_instance" "api" {
   metadata_startup_script = file("${path.module}/../shared/startup_script.sh")
 
   # Launch the instance in the public subnetwork
-  # For details, see https://github.com/gruntwork-io/terraform-google-network/tree/master/modules/vpc-network#access-tier
+  # For details, see https://github.com/tnn-gruntwork-io/terraform-google-network/tree/master/modules/vpc-network#access-tier
   network_interface {
     network    = module.vpc_network.network
     subnetwork = module.vpc_network.public_subnetwork
@@ -161,7 +161,7 @@ resource "google_compute_instance" "proxy" {
   metadata_startup_script = data.template_file.proxy_startup_script.rendered
 
   # Launch the instance in the public subnetwork
-  # For details, see https://github.com/gruntwork-io/terraform-google-network/tree/master/modules/vpc-network#access-tier
+  # For details, see https://github.com/tnn-gruntwork-io/terraform-google-network/tree/master/modules/vpc-network#access-tier
   network_interface {
     network    = module.vpc_network.network
     subnetwork = module.vpc_network.public_subnetwork
