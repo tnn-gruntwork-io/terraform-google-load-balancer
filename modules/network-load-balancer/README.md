@@ -1,7 +1,7 @@
 # Network Load Balancer Module
 
 [![Maintained by Gruntwork.io](https://img.shields.io/badge/maintained%20by-gruntwork.io-%235849a6.svg)](https://gruntwork.io/?ref=repo_google_load_balancer)
-[![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/gruntwork-io/terraform-google-load-balancer.svg?label=latest)](https://github.com/gruntwork-io/terraform-google-load-balancer/releases/latest)
+[![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/tnn-gruntwork-io/terraform-google-load-balancer.svg?label=latest)](https://github.com/tnn-gruntwork-io/terraform-google-load-balancer/releases/latest)
 ![Terraform Version](https://img.shields.io/badge/tf-%3E%3D1.0.x-blue.svg)
 
 This Terraform Module creates a [Network Load Balancer](https://cloud.google.com/load-balancing/docs/network/) using [forwarding rules](https://cloud.google.com/load-balancing/docs/network/#forwarding_rules) and [target pools](https://cloud.google.com/load-balancing/docs/network/#target_pools).
@@ -14,40 +14,40 @@ This repo is a part of [the Gruntwork Infrastructure as Code Library](https://gr
 
 ### Core concepts
 
-- [What is Cloud Load Balancing](https://github.com/gruntwork-io/terraform-google-load-balancer/blob/master/modules/network-load-balancer/core-concepts.md#what-is-cloud-load-balancing)
-- [Network Load Balancer Terminology](https://github.com/gruntwork-io/terraform-google-load-balancer/tree/master/modules/network-load-balancer/core-concepts.md#network-tcpudp-load-balancer-terminology)
+- [What is Cloud Load Balancing](https://github.com/tnn-gruntwork-io/terraform-google-load-balancer/blob/master/modules/network-load-balancer/core-concepts.md#what-is-cloud-load-balancing)
+- [Network Load Balancer Terminology](https://github.com/tnn-gruntwork-io/terraform-google-load-balancer/tree/master/modules/network-load-balancer/core-concepts.md#network-tcpudp-load-balancer-terminology)
 - [Netowrk Load Balancing Documentation](https://cloud.google.com/load-balancing/docs/network/)
 
 ### Repo organisation
 
 This repo has the following folder structure:
 
-* [root](https://github.com/gruntwork-io/terraform-google-load-balancer/tree/master): The root folder contains an example of how to deploy a HTTP Load Balancer with multiple backends. See [http-multi-backend example documentation](https://github.com/gruntwork-io/terraform-google-load-balancer/blob/master/examples/http-multi-backend) for the documentation.
+* [root](https://github.com/tnn-gruntwork-io/terraform-google-load-balancer/tree/master): The root folder contains an example of how to deploy a HTTP Load Balancer with multiple backends. See [http-multi-backend example documentation](https://github.com/tnn-gruntwork-io/terraform-google-load-balancer/blob/master/examples/http-multi-backend) for the documentation.
 
-* [modules](https://github.com/gruntwork-io/terraform-google-load-balancer/blob/master/modules): This folder contains the main implementation code for this Module.
+* [modules](https://github.com/tnn-gruntwork-io/terraform-google-load-balancer/blob/master/modules): This folder contains the main implementation code for this Module.
 
   The primary modules are:
 
-    * [http-load-balancer](https://github.com/gruntwork-io/terraform-google-load-balancer/blob/master/modules/http-load-balancer) is used to create an [HTTP(S) External Load Balancer](https://cloud.google.com/load-balancing/docs/https/).
-    * [internal-load-balancer](https://github.com/gruntwork-io/terraform-google-load-balancer/blob/master/modules/internal-load-balancer) is used to create an [Internal TCP/UDP Load Balancer](https://cloud.google.com/load-balancing/docs/internal/).
-    * [network-load-balancer](https://github.com/gruntwork-io/terraform-google-load-balancer/blob/master/modules/network-load-balancer) is used to create an [External TCP/UDP Load Balancer](https://cloud.google.com/load-balancing/docs/network/).
+    * [http-load-balancer](https://github.com/tnn-gruntwork-io/terraform-google-load-balancer/blob/master/modules/http-load-balancer) is used to create an [HTTP(S) External Load Balancer](https://cloud.google.com/load-balancing/docs/https/).
+    * [internal-load-balancer](https://github.com/tnn-gruntwork-io/terraform-google-load-balancer/blob/master/modules/internal-load-balancer) is used to create an [Internal TCP/UDP Load Balancer](https://cloud.google.com/load-balancing/docs/internal/).
+    * [network-load-balancer](https://github.com/tnn-gruntwork-io/terraform-google-load-balancer/blob/master/modules/network-load-balancer) is used to create an [External TCP/UDP Load Balancer](https://cloud.google.com/load-balancing/docs/network/).
                                                                                                                                            
-* [examples](https://github.com/gruntwork-io/terraform-google-load-balancer/blob/master/examples): This folder contains examples of how to use the submodules.
+* [examples](https://github.com/tnn-gruntwork-io/terraform-google-load-balancer/blob/master/examples): This folder contains examples of how to use the submodules.
 
-* [test](https://github.com/gruntwork-io/terraform-google-load-balancer/blob/master/test): Automated tests for the submodules and examples.
+* [test](https://github.com/tnn-gruntwork-io/terraform-google-load-balancer/blob/master/test): Automated tests for the submodules and examples.
 
 ## Deploy
 
 If you want to try this repo out for experimenting and learning, check out the following resources:
 
-- [examples folder](https://github.com/gruntwork-io/terraform-google-load-balancer/blob/master/examples): The `examples` folder contains sample code optimized for learning, experimenting, and testing.
+- [examples folder](https://github.com/tnn-gruntwork-io/terraform-google-load-balancer/blob/master/examples): The `examples` folder contains sample code optimized for learning, experimenting, and testing.
 
 ## Manage
 
 ### Day-to-day operations
 
-- [Internal Load Balancer access logging and monitoring](https://github.com/gruntwork-io/terraform-google-load-balancer/tree/master/modules/internal-load-balancer/core-concepts.md#internal-tcpudp-load-balancing-monitoring)
-- [Internal Load Balancer DNS names](https://github.com/gruntwork-io/terraform-google-load-balancer/tree/master/modules/internal-load-balancer/core-concepts.md#internal-tcpudp-load-balancing-and-dns-names)
+- [Internal Load Balancer access logging and monitoring](https://github.com/tnn-gruntwork-io/terraform-google-load-balancer/tree/master/modules/internal-load-balancer/core-concepts.md#internal-tcpudp-load-balancing-monitoring)
+- [Internal Load Balancer DNS names](https://github.com/tnn-gruntwork-io/terraform-google-load-balancer/tree/master/modules/internal-load-balancer/core-concepts.md#internal-tcpudp-load-balancing-and-dns-names)
 
 ## Support
 
@@ -61,6 +61,6 @@ Please see [Contributing to the Gruntwork Infrastructure as Code Library](https:
 
 ## License
 
-Please see [LICENSE](https://github.com/gruntwork-io/terraform-google-load-balancer/blob/master/LICENSE.txt) for details on how the code in this repo is licensed.
+Please see [LICENSE](https://github.com/tnn-gruntwork-io/terraform-google-load-balancer/blob/master/LICENSE.txt) for details on how the code in this repo is licensed.
 
 Copyright &copy; 2019 Gruntwork, Inc.

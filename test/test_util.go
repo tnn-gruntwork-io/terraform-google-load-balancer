@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gruntwork-io/terratest/modules/gcp"
-	"github.com/gruntwork-io/terratest/modules/logger"
-	"github.com/gruntwork-io/terratest/modules/retry"
+	"github.com/tnn-gruntwork-io/terratest/modules/gcp"
+	"github.com/tnn-gruntwork-io/terratest/modules/logger"
+	"github.com/tnn-gruntwork-io/terratest/modules/retry"
 	"github.com/stretchr/testify/assert"
 )
 
